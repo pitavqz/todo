@@ -1,0 +1,26 @@
+<div class="row justify-content-center margin-top-xl"  data-ng-controller="TodoController as vm">
+    <div class="col-md-8 text-center">
+        <h1>To Do Application</h1>
+        <div class="row justify-content-center margin-top-xl">
+            <div class="col-md-6">
+                <form name="taskForm">
+                    <div class="input-group mb-3">
+                            <input type="text" class="form-control" placeholder="Add a new task..." aria-label="Add a new task..." data-ng-model="vm.taskDesc" required>
+                            <div class="input-group-append">
+                                <button class="btn btn-primary" ng-disabled="taskForm.$invalid" type="button" id="button-addon2" data-ng-click="vm.addTask()">Add </button>
+                            </div>
+                        
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="row justify-content-center mt-3 text-left">
+                <div class="col-md-6">
+                    <div data-ng-repeat='task in vm.tasks' >
+                            <input type='checkbox' data-ng-click="vm.deleteTask(task.id)" data-ng-model='task'/>
+                            <span >{{task.task_desc}}</span>
+                    </div>
+                </div>
+        </div>
+    </div>
+</div>

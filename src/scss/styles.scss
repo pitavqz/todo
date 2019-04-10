@@ -1,0 +1,22 @@
+
+@import "../../node_modules/bootstrap/scss/bootstrap.scss";
+@import "../../node_modules/sass-google-fonts/src/GoogleFonts.scss";
+@include google-font( 'Montserrat' );
+
+$font-stack: Montserrat;
+$primary-color: #fff;
+
+body {
+    font-family: $font-stack;
+    background-color: #6495ED;
+    color: $primary-color;
+}
+
+.margin-top-xl{
+    margin-top: 2rem;
+}
+
+.done
+{
+  text-decoration: line-through;
+}
