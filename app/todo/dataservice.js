@@ -1,10 +1,10 @@
-var app = angular.module('TododApp');
+var app = angular.module('TododApp'); 
 
 app.factory('TodoData', function($window, $q){
     var indexedDB = $window.indexedDB;
     var dbtodo = null;
     var lastIndex = 0;
-
+ 
     var openDB = function(){
       var deferred = $q.defer();
       var request = indexedDB.open('TodoDB', 1);
@@ -91,7 +91,7 @@ app.factory('TodoData', function($window, $q){
 
       return deferred.promise;
     };
-
+ 
     var deleteTask = function (id) {
       var deferred = $q.defer();
       var trans = dbtodo.transaction(["task"], "readwrite");
