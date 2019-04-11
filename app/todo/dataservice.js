@@ -95,7 +95,7 @@ app.factory('TodoData', function($window, $q){
     var deleteTask = function (id) {
       var deferred = $q.defer();
       var trans = dbtodo.transaction(["task"], "readwrite");
-      var store = trans.objectStore("task");
+      var store = trans.objectStore("task");  
 
       var request = store.delete(id);
 

@@ -7,7 +7,7 @@
         function($routeProvider) {
             $routeProvider
                 .when('/', {
-                    templateUrl: 'views/todo-list.html',
+                    templateUrl: 'todo/todo-list.html',
                     controller: 'TodoController'
                 });
         }

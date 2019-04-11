@@ -4,19 +4,17 @@
   "description": "",
   "main": "index.js",
   "dependencies": {
-    "angular": "^1.5.8",
-    "angular-route": "^1.5.8",
-    "angular-ui-bootstrap": "^2.5.6",
-    "bootstrap": "^4.3.1",
-    "font-awesome": "latest",
+    "angular": "^1.6.9",
+    "angular-route": "^1.6.9",
+    "bootstrap": "^4.0.0",
+    "popper.js": "^1.12.9",
     "jquery": "^3.3.1",
     "sass-google-fonts": "^1.0.1"
   },
   "devDependencies": {
-    "@fortawesome/fontawesome-free": "^5.8.1",
-    "angular": "^1.5.8",
+    "angular": "1.6.9",
     "browser-sync": "^2.7.12",
-    "gulp": "^3.9.1",
+    "gulp": "^3.9.0",
     "gulp-concat": "^2.6.1",
     "gulp-sass": "^4.0.2",
     "node-sass": "^4.11.0"

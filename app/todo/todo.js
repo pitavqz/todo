@@ -3,8 +3,8 @@ var app = angular.module('TododApp');
 
 app.controller('TodoController', function ($window, TodoData) {
     var vm  = this;
-    vm.tasks = [];
-
+    vm.tasks = [];  
+    vm.title = 'To Do Application';
     vm.getTasks = function(){
       TodoData.getTasks().then(function (data) {
         vm.tasks = data; 
@@ -12,7 +12,6 @@ app.controller('TodoController', function ($window, TodoData) {
           console.log(err);
       });
     }
-
     vm.addTask = function () {
       TodoData.addTask(vm.taskDesc).then(function () {
           vm.getTasks();
