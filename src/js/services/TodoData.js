@@ -1,6 +1,6 @@
 var app = angular.module('TododApp');
 
-app.factory('IndexDBTodo', function($window, $q){
+app.factory('TodoData', function($window, $q){
     var indexedDB = $window.indexedDB;
     var dbtodo = null;
     var lastIndex = 0;

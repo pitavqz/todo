@@ -1,13 +1,13 @@
     
 var app = angular.module('TododApp');
 
-app.controller('TodoController', function ($window, IndexDBTodo) {
+app.controller('TodoController', function ($window, TodoData) {
     var vm  = this;
 
     vm.tasks = []
 
     vm.getTasks = function(){
-      IndexDBTodo.getTasks().then(function (data) {
+      TodoData.getTasks().then(function (data) {
         vm.tasks = data; 
       }, function (err) {
           console.log(err);
@@ -15,7 +15,7 @@ app.controller('TodoController', function ($window, IndexDBTodo) {
     }
 
     vm.addTask = function () {
-      IndexDBTodo.addTask(vm.taskDesc).then(function () {
+      TodoData.addTask(vm.taskDesc).then(function () {
           vm.getTasks();
           vm.taskDesc = "";
       }, function (err) {
@@ -24,7 +24,7 @@ app.controller('TodoController', function ($window, IndexDBTodo) {
     };
 
     vm.deleteTask = function (id) {
-      IndexDBTodo.deleteTask(id).then(function () {
+      TodoData.deleteTask(id).then(function () {
           vm.getTasks();
         }, function (err) {
             console.log(err);
@@ -32,7 +32,7 @@ app.controller('TodoController', function ($window, IndexDBTodo) {
     };
     
     function init() {
-      IndexDBTodo.open().then(function () {
+      TodoData.open().then(function () {
         vm.getTasks();
       });
     }
